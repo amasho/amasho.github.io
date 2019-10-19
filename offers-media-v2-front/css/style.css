@@ -1,0 +1,719 @@
+.about, .point, .cta {
+  padding: 0 20px 0 0; }
+  @media (max-width: 768px) {
+    .about, .point, .cta {
+      padding: 80px 5%; } }
+
+.pc {
+  display: block !important; }
+
+.sp {
+  display: none !important; }
+
+@media only screen and (max-width: 768px) {
+  .pc {
+    display: none !important; }
+  .sp {
+    display: block !important; } }
+
+html,
+body {
+  font-family: 'Noto Sans CJK JP', sans-serif;
+  color: #002839; }
+
+a {
+  text-decoration: none;
+  color: #002839; }
+
+a:hover {
+  text-decoration: underline #002839; }
+
+ul {
+  list-style: none; }
+
+.fd-in {
+  opacity: 0;
+  transform: translate(0, 60px);
+  -webkit-transform: translate(0, 60px); }
+
+.fd-done {
+  opacity: 1;
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0); }
+
+.sidebar {
+  padding: 0 0 0 20px;
+  border-left: 1px solid #e6eaed; }
+  .sidebar__register {
+    margin-bottom: 20px; }
+    .sidebar__register li {
+      text-align: center; }
+  .sidebar .sideRanking__item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    margin-bottom: 10px; }
+  .sidebar .sideRanking__image {
+    width: 90px;
+    height: 90px;
+    border-radius: 15px; }
+    .sidebar .sideRanking__image--number {
+      position: absolute;
+      top: -10px;
+      left: 14px;
+      width: 30px;
+      height: 30px;
+      background: #42A4EB;
+      color: #fff;
+      border-radius: 15px;
+      line-height: 30px; }
+    .sidebar .sideRanking__image--wrap {
+      border-radius: 5px;
+      text-align: center;
+      position: relative; }
+    .sidebar .sideRanking__image--text {
+      font-size: 15px;
+      line-height: 164.7%;
+      letter-spacing: 0.15em; }
+  .sidebar .more {
+    text-align: right; }
+  .sidebar .ad {
+    margin: 40px 0; }
+    .sidebar .ad__item {
+      margin: 10px 0; }
+      .sidebar .ad__item--image {
+        text-align: center; }
+
+section {
+  overflow: hidden;
+  transition: 0.8s; }
+
+.more {
+  padding-right: 15px;
+  position: relative;
+  top: 2px; }
+
+.about__container {
+  display: flex;
+  flex-wrap: wrap; }
+
+.about__image {
+  width: 50%; }
+  @media (max-width: 768px) {
+    .about__image {
+      width: 100%; } }
+  .about__image img {
+    width: 100%;
+    height: auto; }
+
+.about__text {
+  width: 50%; }
+  @media (max-width: 768px) {
+    .about__text {
+      width: 100%; } }
+  .about__text p {
+    line-height: 2;
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: 500; }
+    @media (max-width: 768px) {
+      .about__text p {
+        margin: 20px 0 0; } }
+
+.point {
+  background: #f7f7f7; }
+  .point__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none; }
+  .point__item {
+    text-align: center;
+    width: calc((100% / 3) - 14px); }
+    .point__item:not(:first-child) {
+      margin-left: 21px; }
+    @media (max-width: 768px) {
+      .point__item {
+        width: 100%; }
+        .point__item:not(:first-child) {
+          margin: 30px 0 0; } }
+    .point__item i {
+      font-size: 44px;
+      font-weight: 900;
+      width: 50px;
+      border-bottom: 4px solid #000;
+      display: inline-block;
+      text-align: center;
+      padding: 0 0 8px;
+      margin: 0 0 20px; }
+    .point__item p {
+      text-align: left;
+      font-size: 18px; }
+
+.cta__btn {
+  text-align: center; }
+  .cta__btn a {
+    display: inline-block;
+    background: #ff6b95;
+    padding: 15px 40px 15px 20px;
+    margin: 0px 0 0;
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+    border: 2px solid #fff;
+    position: relative; }
+    @media (max-width: 768px) {
+      .cta__btn a {
+        display: block; } }
+    .cta__btn a::after {
+      position: absolute;
+      content: '';
+      right: 20px;
+      width: 8px;
+      height: 8px;
+      top: calc(50% - 4px);
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .cta__btn a:hover {
+      border-color: #ff6b95;
+      background: #fff;
+      color: #ff6b95; }
+      .cta__btn a:hover::after {
+        border-color: #ff6b95; }
+
+/**
+ * detail1.htlm
+ */
+.menu {
+  max-width: 1024px;
+  min-width: 768px;
+  margin: 0 auto; }
+  .menu img {
+    width: 100%;
+    height: auto; }
+  .menu__container {
+    display: grid;
+    grid-template-columns: 250px auto;
+    padding: 30px 50px; }
+  .menu__items {
+    display: table; }
+  .menu__item {
+    font-family: Montserrat;
+    display: table-cell;
+    font-size: 16px;
+    padding: 45px 0;
+    font-weight: 800; }
+    .menu__item--description {
+      font-family: "Noto Sans CJK JP";
+      font-size: 11px; }
+  .menu .search {
+    width: 30px;
+    height: 30px; }
+  .menu__active {
+    width: 80%;
+    border: 2px solid #42a4eb;
+    margin-bottom: 5px; }
+
+.breadcrumbs {
+  font-size: 12px;
+  line-height: 60px;
+  margin-bottom: 10px; }
+  .breadcrumbs a {
+    color: #42A4EB; }
+  .breadcrumbs img {
+    padding: 0 10px; }
+
+.pagination {
+  max-width: 980px;
+  margin: 50px auto;
+  justify-content: center; }
+  .pagination .next,
+  .pagination .previous {
+    background: #ffffff;
+    border: 1px solid #002839;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 250px; }
+  .pagination .next:hover,
+  .pagination .previous:hover {
+    background-color: #002839;
+    color: #fff; }
+  .pagination .pages {
+    display: flex;
+    padding: 7.5px 20px; }
+    .pagination .pages__item {
+      flex-grow: 1;
+      background-color: #efefef;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      margin: 0 5px;
+      text-align: center;
+      font-weight: 500;
+      font-size: 16px; }
+    .pagination .pages__item.current {
+      background-color: #002839;
+      color: #fff; }
+
+.devider {
+  border: 1px solid #E2E6E9;
+  max-width: 980px;
+  margin: 50px auto; }
+
+.detail__title {
+  font-size: 30px;
+  line-height: 135%;
+  letter-spacing: 0.1em;
+  color: #002839;
+  font-style: normal;
+  font-family: "Noto Sans CJK JP";
+  min-height: 94px; }
+
+.detail__date {
+  font-family: "Noto Sans CJK JP";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 180%;
+  letter-spacing: 0.1em;
+  color: #7c9099;
+  margin-bottom: 40px; }
+
+.detail__article img {
+  border-radius: 15px; }
+
+.detail__register {
+  display: table;
+  margin: 50px auto; }
+  .detail__register a {
+    display: table-cell;
+    vertical-align: bottom;
+    padding: 10px 20px; }
+  .detail__register a:nth-child(1) {
+    text-align: right; }
+  .detail__register a:nth-child(2) {
+    text-align: left; }
+
+.share__side--image {
+  background-image: url("/img/share_bg.svg");
+  background-position: top center;
+  text-align: center;
+  height: 100%;
+  position: relative; }
+
+.share__side img {
+  position: absolute;
+  top: 115px;
+  left: 115px; }
+
+.share__footer {
+  padding: 110px 0 50px;
+  background-image: url("/img/share_footer_bg.svg");
+  height: 200px;
+  width: 100%;
+  background-position: center;
+  text-align: center;
+  position: relative; }
+  .share__footer--title {
+    line-height: 35px;
+    letter-spacing: 0.01em;
+    font-family: "Noto Sans CJK JP";
+    font-style: normal;
+    font-weight: normal;
+    position: absolute;
+    top: 40px;
+    left: calc(50% - 64px);
+    font-size: 17px; }
+  .share__footer img {
+    margin: 0 45px; }
+
+.detailArticles .section__header,
+.categoryArticles .section__header {
+  background-position: bottom;
+  line-height: 3em;
+  margin-bottom: 20px;
+  position: relative; }
+
+.detailArticles .section__title,
+.categoryArticles .section__title {
+  background-position: bottom;
+  line-height: 3em;
+  margin-bottom: 20px;
+  position: relative; }
+
+.detailArticles__item,
+.categoryArticles__item {
+  display: grid;
+  grid-template-columns: 130px auto;
+  margin-bottom: 30px; }
+  .detailArticles__item img,
+  .categoryArticles__item img {
+    border-radius: 15px; }
+  .detailArticles__item--date,
+  .categoryArticles__item--date {
+    font-family: "Noto Sans CJK JP";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 180%;
+    letter-spacing: 0.1em;
+    color: #758a93; }
+  .detailArticles__item--title,
+  .categoryArticles__item--title {
+    font-family: "Noto Sans CJK JP";
+    font-weight: 600;
+    border-radius: 15px;
+    font-size: 16px;
+    line-height: 145%;
+    letter-spacing: 0.1em;
+    color: #002839;
+    padding: 5px 0;
+    height: 56px; }
+  .detailArticles__item--description,
+  .categoryArticles__item--description {
+    font-family: "Noto Sans CJK JP";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 180%;
+    letter-spacing: 0.1em;
+    color: #758a93; }
+
+.detailInterviews .section__header,
+.categoryInterviews .section__header {
+  background-position: bottom;
+  line-height: 3em;
+  margin-bottom: 20px;
+  position: relative; }
+
+.detailInterviews .section__title,
+.categoryInterviews .section__title {
+  background-position: bottom;
+  line-height: 3em;
+  margin-bottom: 20px;
+  position: relative; }
+
+.detailInterviews__item,
+.categoryInterviews__item {
+  display: grid;
+  grid-template-columns: 130px auto;
+  margin-bottom: 30px; }
+  .detailInterviews__item img,
+  .categoryInterviews__item img {
+    border-radius: 15px; }
+  .detailInterviews__item--date,
+  .categoryInterviews__item--date {
+    font-family: "Noto Sans CJK JP";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 180%;
+    letter-spacing: 0.1em;
+    color: #758a93; }
+  .detailInterviews__item--title,
+  .categoryInterviews__item--title {
+    font-family: "Noto Sans CJK JP";
+    font-weight: 600;
+    border-radius: 15px;
+    font-size: 16px;
+    line-height: 145%;
+    letter-spacing: 0.1em;
+    color: #002839;
+    padding: 5px 0;
+    height: 56px; }
+  .detailInterviews__item--description,
+  .categoryInterviews__item--description {
+    font-family: "Noto Sans CJK JP";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 180%;
+    letter-spacing: 0.1em;
+    color: #758a93; }
+
+.category__content {
+  max-width: 980px;
+  margin: 0 auto; }
+
+.category__title {
+  font-family: "Noto Sans CJK JP";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 133px;
+  letter-spacing: 0.1em;
+  color: #002839;
+  border-radius: 15px;
+  background-image: url("/img/category_title_bg.svg");
+  margin: 0 auto 30px;
+  width: 980px; }
+
+.category__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%; }
+
+.category__item {
+  flex-grow: 1;
+  padding: 20px; }
+  .category__item img {
+    border-radius: 15px;
+    max-width: 100%; }
+  .category__item--title {
+    font-family: "Noto Sans CJK JP";
+    font-size: 16px;
+    line-height: 145%;
+    letter-spacing: 0.1em;
+    color: #002839;
+    border-radius: 15px; }
+  .category__item--date {
+    font-family: "Noto Sans CJK JP";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 180%;
+    letter-spacing: 0.1em;
+    color: #758A93; }
+
+.category__articles .section__header, .category__interviews .section__header {
+  position: relative;
+  padding: 0 20px; }
+
+.category__articles .section__title--description, .category__interviews .section__title--description {
+  font-size: 18px;
+  text-align: right;
+  top: 13px;
+  right: 20px; }
+
+.search__content {
+  max-width: 980px;
+  margin: 0 auto; }
+
+.search__title {
+  font-family: "Noto Sans CJK JP";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  color: #002839;
+  border-radius: 15px;
+  margin: 0 auto 5px;
+  width: 980px; }
+  .search__title--description {
+    font-size: 11px;
+    line-height: 10px;
+    letter-spacing: 0.1em;
+    color: #758a93; }
+
+.search__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%; }
+
+.search__item {
+  flex-grow: 1;
+  width: 25%;
+  padding: 20px; }
+  .search__item img {
+    border-radius: 15px;
+    max-width: 100%; }
+  .search__item--title {
+    font-family: "Noto Sans CJK JP";
+    font-size: 16px;
+    line-height: 145%;
+    letter-spacing: 0.1em;
+    color: #002839;
+    border-radius: 15px; }
+  .search__item--date {
+    font-family: "Noto Sans CJK JP";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 180%;
+    letter-spacing: 0.1em;
+    color: #758A93; }
+
+.search__articles .section__header, .search__interviews .section__header {
+  position: relative;
+  padding: 0 20px; }
+
+.search__articles .section__title--description, .search__interviews .section__title--description {
+  font-size: 18px;
+  text-align: right;
+  top: 13px;
+  right: 20px; }
+
+.ranking__content {
+  max-width: 980px;
+  margin: 0 auto; }
+
+.ranking__title {
+  font-family: "Noto Sans CJK JP";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 133px;
+  letter-spacing: 0.1em;
+  color: #002839;
+  border-radius: 15px;
+  background-image: url("/img/category_title_bg.svg");
+  margin: 0 auto 30px;
+  width: 980px; }
+
+.ranking .daily,
+.ranking .total {
+  padding: 0 20px; }
+  .ranking .daily h2,
+  .ranking .total h2 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 160%;
+    letter-spacing: 0.1em;
+    color: #002839;
+    line-height: 50px;
+    border-bottom: 5px solid #FEED54;
+    margin-bottom: 20px;
+    text-align: center; }
+  .ranking .daily .ranking__top,
+  .ranking .total .ranking__top {
+    position: relative;
+    border-radius: 15px;
+    margin-bottom: 20px; }
+    .ranking .daily .ranking__top--number,
+    .ranking .total .ranking__top--number {
+      position: absolute;
+      top: -10px;
+      left: -20px;
+      width: 44px;
+      height: 44px;
+      background: #42A4EB;
+      color: #fff;
+      border-radius: 22px;
+      line-height: 44px;
+      text-align: center; }
+    .ranking .daily .ranking__top--thumb,
+    .ranking .total .ranking__top--thumb {
+      width: 100%;
+      height: 350px;
+      overflow: hidden;
+      display: flex;
+      border-radius: 15px; }
+      .ranking .daily .ranking__top--thumb img,
+      .ranking .total .ranking__top--thumb img {
+        object-fit: cover;
+        width: 100%; }
+    .ranking .daily .ranking__top--description,
+    .ranking .total .ranking__top--description {
+      position: absolute;
+      bottom: 0;
+      color: #fff;
+      background: linear-gradient(transparent, #000);
+      padding: 20px;
+      border-radius: 15px;
+      width: 100%; }
+
+.ranking__item {
+  display: grid;
+  grid-template-columns: 120px auto;
+  margin-bottom: 20px; }
+  .ranking__item--img {
+    position: relative; }
+  .ranking__item--number {
+    position: absolute;
+    top: -10px;
+    left: -12px;
+    width: 30px;
+    height: 30px;
+    background: #42A4EB;
+    color: #fff;
+    border-radius: 15px;
+    line-height: 30px;
+    text-align: center; }
+  .ranking__item img {
+    border-radius: 15px;
+    max-width: 100%; }
+  .ranking__item--title {
+    font-family: "Noto Sans CJK JP";
+    font-size: 16px;
+    line-height: 145%;
+    letter-spacing: 0.1em;
+    color: #002839;
+    border-radius: 15px;
+    padding: 0 10px; }
+  .ranking__item--date {
+    font-family: "Noto Sans CJK JP";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 180%;
+    letter-spacing: 0.1em;
+    color: #758A93; }
+
+.ranking__articles .section__header, .ranking__interviews .section__header {
+  position: relative;
+  padding: 0 20px; }
+
+.ranking__articles .section__title--description, .ranking__interviews .section__title--description {
+  font-size: 18px;
+  text-align: right;
+  top: 13px;
+  right: 20px; }
+
+.ranking__articles .articles__list,
+.ranking__articles .interviews__list, .ranking__interviews .articles__list,
+.ranking__interviews .interviews__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%; }
+
+.ranking__articles .articles__item,
+.ranking__articles .interviews__item, .ranking__interviews .articles__item,
+.ranking__interviews .interviews__item {
+  flex-grow: 1;
+  width: 25%;
+  padding: 20px; }
+  .ranking__articles .articles__item img,
+  .ranking__articles .interviews__item img, .ranking__interviews .articles__item img,
+  .ranking__interviews .interviews__item img {
+    border-radius: 15px;
+    max-width: 100%; }
+  .ranking__articles .articles__item--title,
+  .ranking__articles .interviews__item--title, .ranking__interviews .articles__item--title,
+  .ranking__interviews .interviews__item--title {
+    font-family: "Noto Sans CJK JP";
+    font-size: 16px;
+    line-height: 145%;
+    letter-spacing: 0.1em;
+    color: #002839;
+    border-radius: 15px; }
+  .ranking__articles .articles__item--date,
+  .ranking__articles .interviews__item--date, .ranking__interviews .articles__item--date,
+  .ranking__interviews .interviews__item--date {
+    font-family: "Noto Sans CJK JP";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 180%;
+    letter-spacing: 0.1em;
+    color: #758A93; }
+
+.footer {
+  padding: 10% 0 6%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 180%;
+  letter-spacing: 0.1em;
+  text-align: left;
+  max-width: 980px;
+  margin: 0 auto; }
+  .footer a {
+    margin: 5px 20px; }
